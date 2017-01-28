@@ -1,0 +1,7 @@
+<h2>Users</h2>
+<ul>
+  <li *ngFor="let u of  users">
+    <b>{{u.name}}</b>
+    <button (click)="goToChat(u)">Chat</button>
+  </li>
+</ul>

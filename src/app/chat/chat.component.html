@@ -1,0 +1,10 @@
+<textarea [(ngModel)]="msg.text"></textarea><br>
+<button [disabled]="!msg.text" (click)="sendMessage()">Send</button>
+<input type="file" #file (change)="sendImg(file)">
+<hr>
+<div *ngFor="let m of messages">
+  <p>{{m.text}}</p>
+  <img [src]="m.img" *ngIf="m.img" height="50" width="50" alt=""><br>
+  <small>{{m.time | date : 'hh:mm a'}}</small>
+  <hr>
+</div>
